@@ -1,0 +1,9 @@
+=== Q-Learning Evaluation — Last 100 Episodes ===
+Non-Slippery  Success Rate : 100/100  (100%)
+Slippery      Success Rate : 77/100  (77%)
+
+Non-Slippery  Final Epsilon: 0.0500
+Slippery      Final Epsilon: 0.0100
+
+Non-Slippery  Avg Reward (last 1000 ep): 0.9450
+Slippery      Avg Reward (last 1000 ep): 0.6730

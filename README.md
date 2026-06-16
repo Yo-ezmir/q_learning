@@ -1,7 +1,6 @@
 # Q-Learning on FrozenLake
-
 A from-scratch implementation of **Tabular Q-Learning** (value-based, off-policy reinforcement learning) trained on OpenAI Gym's `FrozenLake-v1` environment, using only Python and NumPy.
-
+![Q-Learning Algorithm](q_learning_algorithm.png)
 The agent learns to navigate a frozen grid to reach a goal tile while avoiding holes, under both **deterministic (non-slippery)** and **stochastic (slippery)** dynamics. The project covers Q-table construction, epsilon-greedy action selection with decay, the Bellman update rule, hyperparameter tuning for stability, and a full evaluation/visualization pipeline.
 
 ---
@@ -12,6 +11,10 @@ The agent learns to navigate a frozen grid to reach a goal tile while avoiding h
 q-learning/
 ├── q_learning_frozenlake.ipynb   # Full implementation, training, and evaluation
 ├── report.pdf                    # 2-page written report with full visualizations and critical analysis
+├── q_learning_algorithm.png      # Algorithm flowchart used in README
+├── demo/                         # Supplementary visual demo (local, requires a display)
+│   ├── frozen_lake_qviz.py       # Custom FrozenLake env with live Q-value overlay
+│   └── watch_agent.py            # Trains agents and renders them playing
 ├── outputs/
 │   ├── learning_curves.png       # Avg. reward vs. episodes (slippery vs non-slippery)
 │   ├── epsilon_decay.png         # Exploration rate decay over training
@@ -87,6 +90,18 @@ Additional plots (epsilon decay, Q-table heatmap, learned policy, state visitati
 Final success rate over the last 100 evaluation episodes (greedy policy, ε = 0) is recorded in [`outputs/logs.txt`](outputs/logs.txt).
 
 ---
+
+## Visual Demo
+
+The `demo/` folder contains a supplementary visualization tool that renders a trained agent playing FrozenLake with live Q-values shown on each tile, using `pygame`. It is intended for local inspection of the learned policy and is not part of the core training pipeline; it requires a display window, so it runs locally rather than in Colab.
+
+```bash
+cd demo
+pip install gymnasium[toy-text] numpy pygame
+python watch_agent.py
+```
+
+This trains both agents headlessly, then opens a window to watch the Non-Slippery agent play, followed by the Slippery agent, with the agent's chosen action shown as a direction arrow and the best-known action at each tile highlighted in bold. Use `1` / `0` / `-` / `=` to control playback speed and `ESC` to quit.
 
 ## How to Run
 

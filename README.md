@@ -3,6 +3,7 @@ A from-scratch implementation of **Tabular Q-Learning** (value-based, off-policy
 
 ![Q-Learning Algorithm](q_learning_algorithm.png)
           Image source: GeeksforGeeks
+          
 The agent learns to navigate a frozen grid to reach a goal tile while avoiding holes, under both **deterministic (non-slippery)** and **stochastic (slippery)** dynamics. The project covers Q-table construction, epsilon-greedy action selection with decay, the Bellman update rule, hyperparameter tuning for stability, and a full evaluation/visualization pipeline.
 
 ---

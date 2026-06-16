@@ -1,6 +1,8 @@
 # Q-Learning on FrozenLake
 A from-scratch implementation of **Tabular Q-Learning** (value-based, off-policy reinforcement learning) trained on OpenAI Gym's `FrozenLake-v1` environment, using only Python and NumPy.
+
 ![Q-Learning Algorithm](q_learning_algorithm.png)
+          Image source: GeeksforGeeks
 The agent learns to navigate a frozen grid to reach a goal tile while avoiding holes, under both **deterministic (non-slippery)** and **stochastic (slippery)** dynamics. The project covers Q-table construction, epsilon-greedy action selection with decay, the Bellman update rule, hyperparameter tuning for stability, and a full evaluation/visualization pipeline.
 
 ---
